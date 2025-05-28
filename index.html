@@ -1,18 +1,91 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css"> <!-- 关键的引入样式表代码，确保路径正确 -->
-    <title>个人网站</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Welcome Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #83a4d4, #b6fbff);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      text-align: center;
+      max-width: 400px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      color: #666;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    button {
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 10px;
+      background: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #45a049;
+    }
+
+    @media (max-width: 500px) {
+      .card {
+        width: 90%;
+        padding: 1.5rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <p>Hello 大家好</p>
-    <p>我是霸都、傲天，这是我的个人网站。</p>
-    <p>很高兴你来到这里，你可以在以下的网站找到我</p>
-    <ul>
-        <li><a href="https://www.zhihu.com/people/AJLov eChina">知乎</a></li>
-        <li><a href="http://hejie.nigeerhuo.com">我的博客(已经不更细了，现在在知乎写文章)</a></li>
-    </ul>
+
+  <div class="card">
+    <h1>Welcome to My Page</h1>
+    <p>This is a beautiful responsive card built with HTML, CSS, and JavaScript — all in one file.</p>
+    <button onclick="sayHello()">Click Me</button>
+  </div>
+
+  <script>
+    function sayHello() {
+      alert("Thanks for clicking! Have a great day!");
+    }
+  </script>
+
 </body>
 </html>
